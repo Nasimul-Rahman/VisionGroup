@@ -1,0 +1,33 @@
+.banner {
+    margin-top: 20px;
+    height: 75vh;
+    width: 100vw;
+
+    overflow: hidden;
+    background-image: url("Media/Banner2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner img {
+   
+}
+
+.carousel_indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5vh;
+}
+
+.carousel_indicator {
+    width: 2.5vw;
+    height: 4px;
+    margin: 10px;
+    background-color: #766D6D;
+}
+
+.carousel_indicator.active {
+    background-color: #E10600;
+}
