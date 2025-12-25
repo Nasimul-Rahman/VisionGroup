@@ -1,0 +1,47 @@
+.navbar {
+    height:12vh;
+    width:90vw;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.navbar img {
+    height: 80%;
+    padding: 10px;
+
+    cursor: pointer
+}
+
+.navbar .navbar_buttons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Bebas Neue';
+
+    width: 70%;
+    color: #E10600;
+}
+
+.navbar_button {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar_button p {
+    position: relative;
+    transition: transform 0.25s ease;
+}
+
+.navbar_button p:hover {
+    transform: scale(1.12);
+}
+
+.navbar_button.active {
+    border-bottom: #E10600 solid 2px;
+}
