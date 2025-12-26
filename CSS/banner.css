@@ -8,10 +8,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
 }
 
 .banner img {
-   
 }
 
 .carousel_indicators {
@@ -23,9 +25,10 @@
 
 .carousel_indicator {
     width: 2.5vw;
-    height: 4px;
+    height: 5px;
     margin: 10px;
     background-color: #766D6D;
+    cursor: pointer;
 }
 
 .carousel_indicator.active {
