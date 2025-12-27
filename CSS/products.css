@@ -1,3 +1,9 @@
+
+.products_section {
+  height: 80vh;
+  width: 100%;
+}
+
 .products {
   text-align: center;
   margin: 80px 0;

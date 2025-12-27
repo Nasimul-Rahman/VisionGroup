@@ -55,7 +55,7 @@
 
 /* Slide width is consistent and responsive */
 .slide {
-  flex: 0 0 min(1200px, 92vw);  /* BIG slide, consistent across screens */
+  flex: 0 0 min(45vw, 45vw);  /* BIG slide, consistent across screens */
 }
 
 .slide img {
