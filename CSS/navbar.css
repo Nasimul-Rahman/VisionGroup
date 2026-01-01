@@ -7,6 +7,24 @@
     justify-content: space-between;
     align-items: end;
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  background: white; /* important */
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+body {
+  padding-top: 80px; /* adjust to navbar height */
+}
+
 
 .navbar img {
     height: 80%;
