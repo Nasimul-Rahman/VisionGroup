@@ -1,10 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   const viewport = document.querySelector(".carousel_viewport");
   const track = document.querySelector(".carousel_track");
+  const indicators = Array.from(document.querySelectorAll(".carousel_indicator"));
   if (!viewport || !track) return;
 
   let slides = Array.from(track.querySelectorAll(".slide"));
   if (slides.length < 2) return;
+
+  const realCount = slides.length; // before cloning
+
+  // --- helpers for indicators ---
+  function setActiveIndicator(realIndex) {
+    if (!indicators.length) return;
+    indicators.forEach((dot) => dot.classList.remove("active"));
+    const safe = ((realIndex % realCount) + realCount) % realCount; // 0..realCount-1
+    if (indicators[safe]) indicators[safe].classList.add("active");
+  }
 
   // Clone for infinite loop
   const firstClone = slides[0].cloneNode(true);
@@ -17,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   slides = Array.from(track.querySelectorAll(".slide"));
 
-  let index = 1; // real first
+  let index = 1; // real first (because 0 is lastClone)
   let isAnimating = false;
 
   function centerTo(i, animate = true) {
@@ -34,14 +45,25 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transform = `translateX(-${x}px)`;
   }
 
+  function updateIndicatorFromTrackIndex(trackIndex) {
+    // trackIndex: 1..realCount maps to 0..realCount-1
+    const realIndex = trackIndex - 1;
+    setActiveIndicator(realIndex);
+  }
+
   // init
   centerTo(index, false);
+  updateIndicatorFromTrackIndex(index);
 
   function next() {
     if (isAnimating) return;
     isAnimating = true;
     index++;
     centerTo(index, true);
+
+    // Update immediately for responsiveness
+    if (index === slides.length - 1) setActiveIndicator(0); // moving onto firstClone
+    else updateIndicatorFromTrackIndex(index);
   }
 
   function prev() {
@@ -49,6 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
     isAnimating = true;
     index--;
     centerTo(index, true);
+
+    // Update immediately for responsiveness
+    if (index === 0) setActiveIndicator(realCount - 1); // moving onto lastClone
+    else updateIndicatorFromTrackIndex(index);
   }
 
   track.addEventListener("transitionend", () => {
@@ -62,6 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       centerTo(index, false);
     }
+
+    // Ensure indicator is correct after any jump
+    updateIndicatorFromTrackIndex(index);
 
     isAnimating = false;
   });
@@ -79,5 +108,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowRight") next();
     if (e.key === "ArrowLeft") prev();
   });
-});
 
+  // Optional: click indicators to jump
+  if (indicators.length) {
+    indicators.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        if (isAnimating) return;
+
+        // i is realIndex (0..realCount-1). track index is +1 because of lastClone at 0.
+        index = i + 1;
+        centerTo(index, true);
+        setActiveIndicator(i);
+
+        // restart auto timer so it feels consistent
+        clearInterval(timer);
+        timer = setInterval(next, 3000);
+      });
+    });
+  }
+});
