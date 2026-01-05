@@ -1,0 +1,48 @@
+.capacity {
+  background: #6b0000;
+  padding: 20px 10% 80px;
+  text-align: center;
+}
+
+.capacity h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.capacity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(500px, 1fr));
+  gap: 50px;
+}
+
+.capacity-card {
+  background: #e6e6e6;
+  padding: 25px;
+  text-align: left;
+}
+
+.capacity-card h4 {
+  color: #c00;
+  font-size: 20px;
+}
+
+.capacity-card p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.capacity-bar {
+  height: 11px;
+  background: #d3b3b3;
+  overflow: hidden;
+}
+
+.capacity-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #c00;
+  transition: width 1.2s ease;
+}
