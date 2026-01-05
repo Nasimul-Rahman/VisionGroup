@@ -58,15 +58,16 @@ body {
     min-width: 60px;
 }
 
-.navbar_button p {
-    position: relative;
-    transition: transform 0.25s ease;
+.navbar_button {
+  text-decoration: none;
+  color: #E10600;
 }
 
-.navbar_button p:hover {
-    transform: scale(1.12);
+.navbar_button:visited {
+  color: #E10600;
 }
 
 .navbar_button.active {
-    border-bottom: #E10600 solid 2px;
+  border-bottom: #E10600 solid 2px;
 }
+
