@@ -10,3 +10,10 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
+
+@media (max-width: 768px)  {
+  body {
+    width:100vw;
+    overflow-x: hidden;
+  }
+}

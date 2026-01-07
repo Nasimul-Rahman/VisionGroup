@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   transition: transform 0.3s ease;
   z-index: 1000;
   background: white; /* important */
@@ -70,4 +70,43 @@ body {
 .navbar_button.active {
   border-bottom: #E10600 solid 2px;
 }
+
+.hamburger_menu_container {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    align-items: center;
+  }
+
+  .navbar .navbar_buttons {
+    display: none;
+  }
+
+
+  .navbar img {
+    margin-left: 10px;
+    height: 50%;
+  }
+
+  .hamburger_menu_container{
+    display: flex;              /* actually shows + lets us center */
+    align-items: center;
+    justify-content: center;  /* push it to the right */
+    height: 100%;
+    width: 18vw;                /* you had this, it's fine */
+  }
+
+  .hamburger_menu_btn{
+    display: block;             /* better than inline */
+    font-size: 28px;            /* makes it visible */
+    color: #E10600;             /* match your theme */
+    cursor: pointer;
+    line-height: 1;
+    
+  }
+}
+
 
