@@ -11,6 +11,16 @@ body {
     align-items: center;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 @media (max-width: 768px)  {
   body {
     width:100vw;
