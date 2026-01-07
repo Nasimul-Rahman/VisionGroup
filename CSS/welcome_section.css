@@ -102,3 +102,64 @@
     right: 20%;
     color:#E10600
 }
+
+@media (max-width: 768px)  {
+  .welcome_section {
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    }
+
+    .rect-1, .rect-2 {
+        display: none;
+    }
+
+    .welcome_section_content_right p {
+        font-family: 'Bebas Neue';
+        color: #1A1A1A;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .about-btn {
+        background-color: #e10600;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 18px;
+        font-weight: 1.7rem;
+        letter-spacing: 0.8px;
+
+        padding: 10px 32px;
+        border-radius: 30px;
+
+        width: 40vw;
+
+        border: 2px solid white;            /* inner white border */
+        outline: 2px solid #e10600;          /* outer red border */
+        outline-offset: -6px;
+
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    .welcome_section_content_right {
+        width: 80%;
+    }
+
+    .welcome_section_content_left {
+
+    height: 200px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+}
