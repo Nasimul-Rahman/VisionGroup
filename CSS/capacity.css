@@ -26,12 +26,14 @@
 
 .capacity-card h4 {
   color: #c00;
-  font-size: 20px;
+  font-size: 35px;
+  font-family: 'Bebas Neue';
 }
 
 .capacity-card p {
-  font-size: 15px;
+  font-size: 26px;
   margin-bottom: 20px;
+  font-family: 'Bebas Neue';
 }
 
 .capacity-bar {

@@ -47,7 +47,9 @@
 
 .facility-card h4 {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 25px;
+  font-weight: lighter;
+  font-family: 'Bebas Neue';
 }
 
 .facility-card p {
