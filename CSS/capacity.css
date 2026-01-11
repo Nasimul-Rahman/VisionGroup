@@ -10,6 +10,7 @@
   color: white;
   font-size: 48px;
   margin-bottom: 50px;
+  margin-top: 0px;
 }
 
 .capacity-grid {
@@ -28,6 +29,7 @@
   color: #c00;
   font-size: 35px;
   font-family: 'Bebas Neue';
+  margin: 0px;
 }
 
 .capacity-card p {
