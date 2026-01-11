@@ -49,3 +49,51 @@
   background: #c00;
   transition: width 1.2s ease;
 }
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .capacity {
+    padding: 40px 6% 80px;
+  }
+
+  .capacity-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .capacity-card h4 {
+    font-size: 30px;
+  }
+
+  .capacity-card p {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .capacity {
+    padding: 40px 5% 60px;
+  }
+
+  .capacity h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+  }
+
+  .capacity-card {
+    padding: 20px;
+  }
+
+  .capacity-card h4 {
+    font-size: 24px;
+  }
+
+  .capacity-card p {
+    font-size: 18px;
+  }
+
+  .capacity-bar {
+    height: 8px;
+  }
+}

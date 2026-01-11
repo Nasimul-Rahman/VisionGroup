@@ -46,6 +46,10 @@
   margin-bottom: 10px;
 }
 
+.contact-card a {
+  color:#c00;
+}
+
 .contact-card.highlight {
   background: linear-gradient(135deg, #8b0000, #c00000);
   color: white;
