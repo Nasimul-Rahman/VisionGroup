@@ -23,6 +23,7 @@
   background: #e6e6e6;
   padding: 25px;
   text-align: left;
+  box-shadow: 5px 10px 8px black;
 }
 
 .capacity-card h4 {

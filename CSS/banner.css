@@ -76,5 +76,15 @@
   background-color: white;
 } */
 
+@media (max-width: 768px) {
+  .carousel_indicator {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    margin: 10px;
+    background-color: #766D6D;
+    cursor: pointer;
+  }
+}
 
 

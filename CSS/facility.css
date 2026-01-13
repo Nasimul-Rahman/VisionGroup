@@ -58,3 +58,56 @@
   font-size: 12px;
   color: #666;
 }
+
+.facility-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.facility-modal.active {
+  display: flex;
+}
+
+.facility-modal-content {
+  background: #fff;
+  max-width: 500px;
+  width: 90%;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  animation: scaleIn 0.25s ease;
+}
+
+.facility-modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.facility-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
