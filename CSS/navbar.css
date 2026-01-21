@@ -63,6 +63,16 @@ body {
   color: #E10600;
 }
 
+.navbar_button:hover {
+  border-bottom: #E10600 solid 2px;
+}
+
+.navbar_button i {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+
 .navbar_button:visited {
   color: #E10600;
 }
@@ -70,6 +80,68 @@ body {
 .navbar_button.active {
   border-bottom: #E10600 solid 2px;
 }
+
+
+/* Wrapper for a dropdown item */
+.dropdown{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 12vh;
+}
+
+/* The menu itself */
+.dropdown_menu{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 190px;
+
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.2s ease;
+
+  padding: 10px;
+  z-index: 2000;
+}
+
+/* Links inside dropdown */
+.dropdown_menu a{
+  display: block;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  color: #E10600;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* Hover effect inside menu */
+.dropdown_menu a:hover{
+  background: rgba(225, 6, 0, 0.08);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown_menu{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Optional: rotate caret on hover */
+.dropdown:hover .navbar_button i{
+  transform: rotate(180deg);
+  transition: transform 0.25s ease;
+}
+
 
 .hamburger_menu_container {
   display: none;
