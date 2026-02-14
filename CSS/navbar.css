@@ -27,7 +27,7 @@ body {
 
 
 .navbar img {
-    height: 80%;
+    height: 120px;
     padding: 10px;
 
     cursor: pointer
@@ -246,7 +246,7 @@ body.sidebar-open {
 
   .navbar img {
     margin-left: 10px;
-    height: 50%;
+    height: 70px;
   }
 
   .hamburger_menu_container{
