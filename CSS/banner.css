@@ -85,6 +85,10 @@
     background-color: #766D6D;
     cursor: pointer;
   }
+
+  .slide {
+    flex: 0 0 min(80vw, 80vw);  /* BIG slide, consistent across screens */
+  }
 }
 
 
