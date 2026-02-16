@@ -9,6 +9,7 @@
   font-size: 48px;
 }
 
+
 .facilities-desc {
   color: #DD6F70;
   margin-bottom: 50px;
@@ -20,6 +21,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  overflow: visible;
 }
 
 .facility-card {
@@ -30,6 +32,7 @@
   color: inherit;
   overflow: hidden;
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .facility-card img {
@@ -39,12 +42,17 @@
   transition: transform 0.3s ease;
 }
 
-.facility-card:hover {
-  transform: translateY(-6px);
+.facility-card.fade-in.show:hover {
+  transform: translateY(0) scale(1.08);
+  z-index: 5;
 }
 
-.facility-card:hover img {
+.facility-card:hover {
   transform: scale(1.08);
+}
+
+.facility-card:hover h4 {
+  text-decoration: underline;
 }
 
 .facility-card h4 {
@@ -52,6 +60,7 @@
   font-size: 25px;
   font-weight: lighter;
   font-family: 'Bebas Neue';
+  transition: transform 0.3s ease;
 }
 
 .facility-card p {
@@ -110,4 +119,3 @@
     gap: 20px;
   }
 }
-
