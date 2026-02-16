@@ -19,6 +19,7 @@ function hidePreloader() {
     // ✅ matches your CSS: #preloader.is-hidden { ... }
     preloader.classList.add("is-hidden");
     document.body.classList.remove("is-locked");
+    document.body.classList.remove("no-scroll");
 
     // Optional: remove from DOM AFTER your 350ms fade
     setTimeout(() => {

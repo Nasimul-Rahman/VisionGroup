@@ -1,0 +1,33 @@
+#siteContent {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+#siteContent.loaded {
+  opacity: 1;
+}
+
+/* initial hidden state */
+.navbar {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+/* visible state */
+.navbar.loaded {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
