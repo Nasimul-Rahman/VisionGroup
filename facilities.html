@@ -14,27 +14,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/5e8ced63ce.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="CSS\main.css">
 </head>
 <body>
-    <div class="navbar">
-        <img src="CSS\Media\Logo-Web.png" alt="Vision Group Logo">
+   <div class="navbar">
+        <a href="index.html" class="logo_link">
+          <img src="CSS/Media/Logo-Web.png" alt="Vision Group Logo">
+        </a>
         <div class="navbar_buttons">
-    <a href="index.html" class="navbar_button active"><p>HOME</p></a>
-    <a href="companies.html" class="navbar_button"><p>COMPANIES</p></a>
-    <a href="products.html" class="navbar_button"><p>PRODUCTS</p></a>
-    <a href="facilities.html" class="navbar_button"><p>FACILITIES</p></a>
-    <a href="certification.html" class="navbar_button"><p>CERTIFICATION</p></a>
-    <a href="gallery.html" class="navbar_button"><p>GALLERY</p></a>
-    <a href="compliance.html" class="navbar_button"><p>COMPLIANCE</p></a>
-    <a href="career.html" class="navbar_button"><p>CAREER</p></a>
-    <a href="contact.html" class="navbar_button"><p>CONTACT</p></a>
+          <div class="dropdown">
+    <a href="index.html" class="navbar_button active"><p>HOME</p><i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown_menu">
+      <a href="index.html#about">About</a>
+      <a href="index.html#why">Why Vision Group</a>
+    </div>
+  </div>
+          <div class="dropdown">
+    <a href="companies.html" class="navbar_button"><p>COMPANIES</p><i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown_menu">
+      <a href="companies.html#vision">Vision</a>
+      <a href="companies.html#sister">Sister Concern</a>
+    </div>
+  </div>
+          <a href="products.html" class="navbar_button"><p>PRODUCTS</p></a>
+          <a href="facilities.html" class="navbar_button"><p>FACILITIES</p></a>
+          <a href="certification.html" class="navbar_button"><p>CERTIFICATION</p></a>
+          <a href="gallery.html" class="navbar_button"><p>GALLERY</p></a>
+          <div class="dropdown">
+    <a href="compliance.html" class="navbar_button"><p>COMPLIANCE</p><i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown_menu">
+      <a href="policies.html">Policies</a>
+      <a href="compliance.html#audit">Audits</a>
+    </div>
+  </div>
+          <a href="career.html" class="navbar_button"><p>CAREER</p></a>
+          <a href="contact.html" class="navbar_button"><p>CONTACT</p></a>
+        </div>
+        <div class="hamburger_menu_container">
+          <i class="fa-solid fa-bars hamburger_menu_btn"></i>
         </div>
     </div>
 
+
     
-  
+  <div id="siteContent" class="is-loading">
     
 <section class="facilities">
   <h2>FACILITIES</h2>
@@ -116,7 +142,7 @@
   </div>
 </div>
 
-  
+  </div>
 
 
 
@@ -127,11 +153,15 @@
 
 
 
+    <script src="JS/preloader.js" defer></script>
     <script src="JS/carousel.js" defer></script>
     <script src="JS/products.js" defer></script>
     <script src="JS/buyers.js" defer></script>
     <script src="JS/navbar.js" defer></script>
     <script src="JS/capacity.js" defer></script>
+    <script src="JS/sidebar.js" defer></script>
+    <script src="JS/facilitiesmodal.js" defer></script>
+    <script src="JS/loadingfx.js" defer></script>
 
 
 

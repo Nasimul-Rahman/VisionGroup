@@ -1,44 +1,50 @@
-const MIN_DURATION = 5000; // mandatory time in ms (3s)
+const MIN_DURATION = 5000; // mandatory time in ms
 
-const startTime = Date.now();
 const preloader = document.getElementById("preloader");
 const video = document.getElementById("preloaderVideo");
 
-document.body.classList.add("is-locked");
+// ✅ Only play once per tab session
+const alreadyPlayed = sessionStorage.getItem("preloaderPlayed");
 
-let isHiding = false;
+if (alreadyPlayed) {
+  // Skip instantly
+  if (preloader) preloader.remove();
+  document.body.classList.remove("is-locked", "no-scroll");
+} else {
+  const startTime = Date.now();
 
-function hidePreloader() {
-  if (isHiding) return;
-  isHiding = true;
+  document.body.classList.add("is-locked"); // (or no-scroll, pick one)
 
-  const elapsed = Date.now() - startTime;
-  const remaining = Math.max(0, MIN_DURATION - elapsed);
+  let isHiding = false;
 
-  setTimeout(() => {
-    // ✅ matches your CSS: #preloader.is-hidden { ... }
-    preloader.classList.add("is-hidden");
-    document.body.classList.remove("is-locked");
-    document.body.classList.remove("no-scroll");
+  function hidePreloader() {
+    if (isHiding) return;
+    isHiding = true;
 
-    // Optional: remove from DOM AFTER your 350ms fade
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, MIN_DURATION - elapsed);
+
     setTimeout(() => {
-      preloader.remove();
-    }, 400);
-  }, remaining);
-}
+      // remember for next navigations
+      sessionStorage.setItem("preloaderPlayed", "true");
 
-// When page finishes loading
-window.addEventListener("load", hidePreloader);
+      preloader.classList.add("is-hidden");
+      document.body.classList.remove("is-locked", "no-scroll");
 
-// Safety fallback (never block forever)
-setTimeout(hidePreloader, MIN_DURATION + 2000);
+      setTimeout(() => {
+        preloader.remove();
+      }, 400); // matches your fade
+    }, remaining);
+  }
 
-// Ensure autoplay (muted)
-if (video) {
-  video.muted = true;
-  video.playsInline = true;
-  video.play().catch(() => {});
+  window.addEventListener("load", hidePreloader);
+  setTimeout(hidePreloader, MIN_DURATION + 2000);
+
+  if (video) {
+    video.muted = true;
+    video.playsInline = true;
+    video.play().catch(() => {});
+  }
 }
 
 
