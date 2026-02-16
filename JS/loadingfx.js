@@ -14,11 +14,11 @@ window.addEventListener("load", () => {
   else {
     setTimeout(() => {
       siteContent.classList.add("loaded");
-    }, 5000);
+    }, 4000);
 
     setTimeout(() => {
       navbar.classList.add("loaded");
-    }, 5800);
+    }, 4800);
   }
 
   // 👇 Scroll fade-in observer (always runs)
