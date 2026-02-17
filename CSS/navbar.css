@@ -233,6 +233,57 @@ body.sidebar-open {
   overflow: hidden;
 }
 
+/* Dropdown button */
+.sidebar_dropdown_btn {
+  width: 100%;
+  text-align: left;
+  font-family: "Bebas Neue";
+  font-size: 22px;
+  color: #E10600;
+  background: none;
+  border: none;
+  padding: 10px 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Hidden submenu */
+.sidebar_submenu {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  transition: max-height 0.35s ease;
+}
+
+/* submenu links */
+.sidebar_submenu a {
+  font-size: 18px;
+  color: #444;
+  padding: 6px 8px;
+}
+
+/* When open */
+.sidebar_dropdown.open .sidebar_submenu {
+  max-height: 200px;
+}
+
+.sidebar_dropdown i {
+  font-size: 18px;
+  margin-left: 8px;
+  padding-bottom: 3px
+}
+
+/* Rotate arrow */
+.sidebar_dropdown.open i {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+
 
 @media (max-width: 768px) {
 

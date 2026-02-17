@@ -23,3 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") close();
   });
 });
+
+// Dropdown toggle
+document.querySelectorAll(".sidebar_dropdown_btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("open");
+  });
+});
