@@ -1,0 +1,39 @@
+.company_info_section {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin:50px;
+}
+
+.company_info_section h2 {
+    font-size: 60px;
+    font-family: 'Bebas Neue';
+    font-weight: lighter;
+    color: #E10600;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.company_info_section h3 {
+    color: #DD6F70;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+}
+
+.company_info_section p {
+    font-family: 'Bebas Neue';
+    color: #1A1A1A;
+    font-size: 20px;
+}
+
+.company_info_section ul {
+    list-style: none;
+}
+
+.company_info_section li {
+    font-family: 'Bebas Neue';
+    color: #1A1A1A;
+    font-size: 20px
+}
