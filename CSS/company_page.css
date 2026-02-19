@@ -63,9 +63,38 @@
 
 .company_info_section .contact_card {
     width: 30vw;
-    border: #E10600 2px solid;
     padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.company_info_section .contact_card p {
+  margin: 0px;
+}
+
+.company_info_section .contact_card img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.company_info_section .pdf-btn{
+  display:inline-block;
+  padding:12px 22px;
+  background:#E10600;
+  color:#fff;
+  font-family:'Exo 2', sans-serif;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.company_info_section .pdf-btn:hover{
+  background:#b30000;
+}
+
 
 
 /* Optional: slightly taller images on larger screens */
