@@ -37,3 +37,41 @@
     color: #1A1A1A;
     font-size: 20px
 }
+
+/* CSS */
+.company_info_section .image-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 20px 8%;
+}
+
+.company_info_section .image-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.company_info_section .image-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.company_info_section .contact_card {
+    width: 30vw;
+    border: #E10600 2px solid;
+    padding: 10px;
+}
+
+
+/* Optional: slightly taller images on larger screens */
+@media (min-width: 900px) {
+  .image-grid img {
+    height: 260px;
+  }
+}
+
