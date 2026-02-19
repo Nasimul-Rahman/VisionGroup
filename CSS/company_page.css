@@ -13,7 +13,6 @@
     font-weight: lighter;
     color: #E10600;
     text-align: center;
-    margin-top: 0px;
 }
 
 .company_info_section h3 {
@@ -95,6 +94,15 @@
   background:#b30000;
 }
 
+.company_info_section .images_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.company_info_section .images_container .image_container {
+  margin: 10px;
+}
 
 
 /* Optional: slightly taller images on larger screens */
@@ -102,5 +110,16 @@
   .image-grid img {
     height: 260px;
   }
+
+  
+
 }
 
+@media (max-width: 768px) {
+  .company_info_section .images_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+}
