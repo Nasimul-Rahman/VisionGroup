@@ -7,6 +7,15 @@
     margin:50px;
 }
 
+.company_info_section {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin:50px;
+}
+
 .company_info_section h2 {
     font-size: 60px;
     font-family: 'Bebas Neue';
@@ -140,31 +149,39 @@
 }
 
 @media (max-width: 768px) {
-  .company_info_section .images_container {
+    .company_info_section .images_container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+
+  .board_section {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 5px;
   }
 
   .company_info_section .director_card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 300px;
-    width: 80vw;
-    margin: 20px;
-  }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+    }
 
-  .company_info_section .director_card_img {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    margin: 30px;
+  .company_info_section .director_card_text{
+      width: 100%;           /* ✅ don’t keep 82% */
+    }
 
-    background-size: cover;      /* fills circle */
-    background-position: center; /* centers face */
-    background-repeat: no-repeat;
-  }
+  .company_info_section .director_card_img{
+      width: 220px;
+      height: 220px;
+      margin: 20px 0;        /* ✅ smaller margin */
+      flex: 0 0 auto;        /* ✅ prevent flex shrinking weirdness */
+    }
   }
