@@ -66,3 +66,12 @@
   color: white;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
