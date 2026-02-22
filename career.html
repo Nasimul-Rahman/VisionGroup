@@ -18,18 +18,51 @@
     <link rel="stylesheet" href="CSS\main.css">
 </head>
 <body>
+
+  <!-- Your site content -->
+    <div id="siteContent">
+      <!-- ...everything else in your site... -->
     <div class="navbar">
-        <img src="CSS\Media\Logo-Web.png" alt="Vision Group Logo">
+        <a href="index.html" class="logo_link">
+          <img src="CSS/Media/Logo-Web.png" alt="Vision Group Logo">
+        </a>
         <div class="navbar_buttons">
-    <a href="index.html" class="navbar_button active"><p>HOME</p></a>
-    <a href="companies.html" class="navbar_button"><p>COMPANIES</p></a>
-    <a href="products.html" class="navbar_button"><p>PRODUCTS</p></a>
-    <a href="facilities.html" class="navbar_button"><p>FACILITIES</p></a>
-    <a href="certification.html" class="navbar_button"><p>CERTIFICATION</p></a>
-    <a href="gallery.html" class="navbar_button"><p>GALLERY</p></a>
-    <a href="compliance.html" class="navbar_button"><p>COMPLIANCE</p></a>
-    <a href="career.html" class="navbar_button"><p>CAREER</p></a>
-    <a href="contact.html" class="navbar_button"><p>CONTACT</p></a>
+          <div class="dropdown">
+    <a href="index.html" class="navbar_button active"><p>HOME</p><i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown_menu">
+      <a href="aboutus.html">About Us</a>
+      <a href="bod.html">Board of Directors</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </div>
+          <div class="dropdown">
+    <a href="companies.html" class="navbar_button"><p>COMPANIES</p><i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown_menu">
+      <a href="visionapparels.html">Vision Apparels Pvt. Ltd</a>
+      <a href="visioncompositeknit.html">Vision Composite Knit Ltd</a>
+      <a href="visionaccessories.html">Vision Accessories Ltd</a>
+      <a href="visiongarments.html">Vision Garments Ltd</a>
+      <a href="visionwashing.html">Vision Washing Ltd</a>
+      <a href="razzaquepackaging.html">Razzaque Packaging Ltd</a>
+    </div>
+  </div>
+          <a href="products.html" class="navbar_button"><p>PRODUCTS</p></a>
+          <a href="facilities.html" class="navbar_button"><p>FACILITIES</p></a>
+          <a href="certification.html" class="navbar_button"><p>CERTIFICATION</p></a>
+          <a href="gallery.html" class="navbar_button"><p>GALLERY</p></a>
+          <div class="dropdown">
+    <a href="compliance.html" class="navbar_button"><p>COMPLIANCE</p><i class="fa-solid fa-caret-down"></i></a>
+    <div class="dropdown_menu">
+      <a href="policies.html">Policy</a>
+      <a href="compliance.html#audit">Waste Management</a>
+      <a href="compliance.html#audit">Environmental Safety</a>
+    </div>
+  </div>
+          <a href="career.html" class="navbar_button"><p>CAREER</p></a>
+          <a href="contact.html" class="navbar_button"><p>CONTACT</p></a>
+        </div>
+        <div class="hamburger_menu_container">
+          <i class="fa-solid fa-bars hamburger_menu_btn"></i>
         </div>
     </div>
 
@@ -111,6 +144,106 @@
   </div>
 </section>
 
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col brand">
+      <img src="CSS/Media/Logo-Web.png" alt="Vision Group">
+      <p>Your trusted partner for corporate apparel and uniform solutions since 2010.</p>
+      <p>📞 1800 123 456</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#">Custom Embroidery</a>
+      <a href="#">Screen Printing</a>
+      <a href="#">Corporate Uniforms</a>
+      <a href="#">Promotional Products</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <a href="#">Healthcare</a>
+      <a href="#">Hospitality</a>
+      <a href="#">Corporate</a>
+      <a href="#">Sports & Events</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Our Team</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=Vision%20Apparels%20Pvt%20Ltd%20Dhaka&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</footer>
+
+<!-- Mobile Sidebar -->
+<div class="sidebar_overlay" id="sidebarOverlay"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar_header">
+    <span class="sidebar_title">Menu</span>
+    <button class="sidebar_close" id="sidebarClose" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <nav class="sidebar_links">
+    <div class="sidebar_dropdown">
+      <button class="sidebar_dropdown_btn">
+        HOME <i class="fa-solid fa-chevron-down"></i>
+      </button>
+
+      <div class="sidebar_submenu">
+        <a href="aboutus.html">About Us</a>
+        <a href="bod.html">Board of Directors</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </div>
+    <div class="sidebar_dropdown">
+      <button class="sidebar_dropdown_btn">
+        COMPANIES <i class="fa-solid fa-chevron-down"></i>
+      </button>
+
+      <div class="sidebar_submenu">
+        <a href="visionapparels.html">Vision Apparels Pvt. Ltd</a>
+        <a href="visioncompositeknit.html">Vision Composite Knit Ltd</a>
+        <a href="visionaccessories.html">Vision Accessories Ltd</a>
+        <a href="visiongarments.html">Vision Garments Ltd</a>
+        <a href="visionwashing.html">Vision Washing Ltd</a>
+        <a href="razzaquepackaging.html">Razzaque Packaging Ltd</a>
+      </div>
+    </div>
+    <a href="products.html">PRODUCTS</a>
+    <a href="facilities.html">FACILITIES</a>
+    <a href="certification.html">CERTIFICATION</a>
+    <a href="gallery.html">GALLERY</a>
+    <div class="sidebar_dropdown">
+      <button class="sidebar_dropdown_btn">
+        COMPLIANCE <i class="fa-solid fa-chevron-down"></i>
+      </button>
+
+      <div class="sidebar_submenu">
+        <a href="policies.html">Policy</a>
+        <a href="companies.html#sister">Waste Management</a>
+        <a href="companies.html#sister">Environemntal Safety</a>
+      </div>
+    </div>
+    <a href="career.html">CAREER</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</aside>
+
+
+</div>
 
 
 
@@ -118,12 +251,15 @@
 
 
 
-
+    <script src="JS/preloader.js" defer></script>
     <script src="JS/carousel.js" defer></script>
     <script src="JS/products.js" defer></script>
     <script src="JS/buyers.js" defer></script>
     <script src="JS/navbar.js" defer></script>
     <script src="JS/capacity.js" defer></script>
+    <script src="JS/sidebar.js" defer></script>
+    <script src="JS/facilitiesmodal.js" defer></script>
+    <script src="JS/loadingfx.js" defer></script>
 
 
 
