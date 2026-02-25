@@ -46,4 +46,9 @@
   object-fit: contain;
   background: #f7f7f7;
   padding: 10px;
+  transition: transform 0.5s ease;
+}
+
+.certpage-grid img:hover {
+  transform: scale(1.3);
 }
