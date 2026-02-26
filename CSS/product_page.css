@@ -1,5 +1,71 @@
-.products-page {
-  padding: 30px 10%;
+.product-contact-strip {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 80px 10%;
+  background: linear-gradient(to bottom, #f4f6f9, #ffffff);
+  text-align: center;
+}
+
+.contact-card {
+  max-width: 400px;
+}
+
+.contact-card h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.contact-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: #2e9cc4;
+  margin-bottom: 5px;
+}
+
+.contact-card .title {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contact-card .contact-info {
+  font-size: 16px;
+  color: #222;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 992px) {
+  .product-contact-strip {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-contact-strip {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 5%;
+  }
+}
+
+.product-row {
+  margin: 80px 0;
+  text-align: center;
 }
 
 .products-page h2 {
@@ -10,61 +76,101 @@
   margin-bottom: 60px;
 }
 
-.product-row {
-  margin-bottom: 80px;
-}
-
 .product-row h3 {
-  font-family: 'Bebas Neue';
-  font-size: 34px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  margin-bottom: 40px;
   color: #E10600;
-  margin-bottom: 25px;
-  text-align: center;
-
 }
 
 .product-row-carousel {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
 }
 
-/* reuse your product-card */
+.carousel-viewport {
+  width: 870px; /* 3 cards */
+  overflow: hidden;
+}
+
+.product-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+/* CARD */
 .product-card {
+  min-width: 260px;
   background: #f5f5f5;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 18px 35px rgba(0,0,0,0.15);
 }
 
 .product-card img {
-  width: 260px;
+  width: 100%;
   height: 360px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-/* arrows */
+/* ARROWS */
 .product-row .arrow {
-  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
   border: none;
   font-size: 32px;
   color: #E10600;
   cursor: pointer;
+  padding: 12px 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .product-row-carousel {
-    overflow-x: auto;
-    padding-bottom: 10px;
+.product-row .left { left: 10px; }
+.product-row .right { right: 10px; }
+
+.product-row .arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* ======================
+   TABLET
+====================== */
+@media (max-width: 992px) {
+
+  .carousel-viewport {
+    width: 580px; /* 2 cards */
   }
 
-  .product-row .arrow {
-    display: none;
+  .product-row .left { left: -40px; }
+  .product-row .right { right: -40px; }
+
+}
+
+/* ======================
+   MOBILE
+====================== */
+@media (max-width: 600px) {
+
+  .carousel-viewport {
+    width: 260px; /* 1 card */
   }
 
   .product-card img {
-    width: 220px;
     height: 300px;
+  }
+
+  .product-row .left { left: 5px; }
+  .product-row .right { right: 5px; }
+
+  .product-row .arrow {
+    font-size: 24px;
+    padding: 8px 12px;
   }
 }

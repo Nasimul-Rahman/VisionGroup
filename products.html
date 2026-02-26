@@ -14,10 +14,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/5e8ced63ce.js" crossorigin="anonymous"></script>
+
+
 
     <link rel="stylesheet" href="CSS\main.css">
 </head>
-<body>
+<body class="no-scroll">
+            <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+      <video id="preloaderVideo" autoplay muted playsinline preload="auto">
+        <source src="CSS/Media/Vision (2).mp4" type="video/mp4" />
+        <!-- Optional fallback text -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Your site content -->
+    <div id="siteContent">
+      <!-- ...everything else in your site... -->
+    
+
     <div class="navbar">
         <a href="index.html" class="logo_link">
           <img src="CSS/Media/Logo-Web.png" alt="Vision Group Logo">
@@ -62,78 +80,113 @@
         </div>
     </div>
 
+
     
-  
+  <section class="product-contact-strip">
+
+  <div class="contact-card">
+    <h4>For any inquiries about product development</h4>
+
+    <img src="Images/person1.png" alt="Executive Director">
+
+    <h3>Quazi Mushtaque Ali Mashum</h3>
+    <p class="title">Executive Director, Merchandising</p>
+
+    <p class="contact-info">
+      +8801713239707 <br>
+      mashum@vision-bd.com
+    </p>
+  </div>
+
+
+  <div class="contact-card">
+    <h4>For any inquiries about product development</h4>
+
+    <img src="Images/person1.png" alt="DGM">
+
+    <h3>Sanjay Chakrabarty</h3>
+    <p class="title">DGM, Merchandising</p>
+
+    <p class="contact-info">
+      +8801713483608 <br>
+      sanjay@vision-bd.com
+    </p>
+  </div>
+
+</section>
     
     <section class="products-page">
 
   <h2>OUR PRODUCTS</h2>
 
   <!-- MEN -->
-  <div class="product-row">
-    <h3>MEN</h3>
-    <div class="product-row-carousel">
-      <button class="arrow left">&#8592;</button>
+<div class="product-row">
+  <h3>MEN</h3>
 
-      <div class="product-card">
-        <img src="Images/men1.png">
+  <div class="product-row-carousel">
+
+    <button class="arrow left">&#8592;</button>
+
+    <div class="carousel-viewport">
+      <div class="product-track">
+        <div class="product-card"><img src="Images/men1.png"></div>
+        <div class="product-card"><img src="Images/men2.png"></div>
+        <div class="product-card"><img src="Images/men3.png"></div>
+        <div class="product-card"><img src="Images/men4.png"></div>
+        <div class="product-card"><img src="Images/men5.png"></div>
       </div>
-
-      <div class="product-card">
-        <img src="Images/men2.png">
-      </div>
-
-      <div class="product-card">
-        <img src="Images/men3.png">
-      </div>
-
-      <button class="arrow right">&#8594;</button>
     </div>
+
+    <button class="arrow right">&#8594;</button>
+
   </div>
+</div>
 
   <!-- WOMEN -->
-  <div class="product-row">
-    <h3>WOMEN</h3>
-    <div class="product-row-carousel">
-      <button class="arrow left">&#8592;</button>
+<div class="product-row">
+  <h3>WOMEN</h3>
 
-      <div class="product-card">
-        <img src="Images/female1.png">
-      </div>
+  <div class="product-row-carousel">
 
-      <div class="product-card">
-        <img src="Images/female2.png">
-      </div>
-      
-      <div class="product-card">
-        <img src="Images/female3.png">
-      </div>
+    <button class="arrow left">&#8592;</button>
 
-      <button class="arrow right">&#8594;</button>
+    <div class="carousel-viewport">
+      <div class="product-track">
+        <div class="product-card"><img src="Images/men1.png"></div>
+        <div class="product-card"><img src="Images/men2.png"></div>
+        <div class="product-card"><img src="Images/men3.png"></div>
+        <div class="product-card"><img src="Images/men4.png"></div>
+        <div class="product-card"><img src="Images/men5.png"></div>
+      </div>
     </div>
+
+    <button class="arrow right">&#8594;</button>
+
   </div>
+</div>
 
   <!-- KIDS -->
-  <div class="product-row">
-    <h3>KIDS</h3>
-    <div class="product-row-carousel">
-      <button class="arrow left">&#8592;</button>
+<div class="product-row">
+  <h3>KIDS</h3>
 
-      <div class="product-card">
-        <img src="Images/kids1.png">
+  <div class="product-row-carousel">
+
+    <button class="arrow left">&#8592;</button>
+
+    <div class="carousel-viewport">
+      <div class="product-track">
+        <div class="product-card"><img src="Images/men1.png"></div>
+        <div class="product-card"><img src="Images/men2.png"></div>
+        <div class="product-card"><img src="Images/men3.png"></div>
+        <div class="product-card"><img src="Images/men4.png"></div>
+        <div class="product-card"><img src="Images/men5.png"></div>
       </div>
-
-      <div class="product-card">
-        <img src="Images/kids2.png">
-      </div>
-
-      <div class="product-card">
-        <img src="Images/kids3.png">
-      </div>
-
-      <button class="arrow right">&#8594;</button>
     </div>
+
+    <button class="arrow right">&#8594;</button>
+
   </div>
+</div>
 
 </section>
 
@@ -148,11 +201,17 @@
 
 
 
+    <script src="JS/preloader.js" defer></script>
     <script src="JS/carousel.js" defer></script>
     <script src="JS/products.js" defer></script>
+    <script src="JS/products_page.js" defer></script>
+
     <script src="JS/buyers.js" defer></script>
     <script src="JS/navbar.js" defer></script>
     <script src="JS/capacity.js" defer></script>
+    <script src="JS/sidebar.js" defer></script>
+    <script src="JS/facilitiesmodal.js" defer></script>
+    <script src="JS/loadingfx.js" defer></script>
 
 
 
