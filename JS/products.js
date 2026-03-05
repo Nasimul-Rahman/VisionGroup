@@ -1,7 +1,7 @@
 const products = {
-  men: ["Images/men1.png", "Images/men2.png", "Images/men3.png"],
-  female: ["Images/female1.png", "Images/female2.png"],
-  kids: ["Images/kids1.png", "Images/kids2.png"]
+  men: ["Images/men1.png", "Images/men2.png", "Images/men3.png", "Images/men4.png", "Images/men5.png", "Images/men6.png", "Images/men7.png", "Images/men8.png", "Images/men9.png"],
+  female: ["Images/women1.png", "Images/women2.png", "Images/women3.png", "Images/women4.png", "Images/women5.png", "Images/women6.png", "Images/women7.png", "Images/women8.png", "Images/women9.png"],
+  kids: ["Images/kid1.png", "Images/kid2.png", "Images/kid3.png", "Images/kid4.png", "Images/kid5.png", "Images/kid6.png", "Images/kid7.png"]
 };
 
 let currentCategory = "men";
