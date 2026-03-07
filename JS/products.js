@@ -1,7 +1,7 @@
 const products = {
-  men: ["Images/men1.png", "Images/men2.png", "Images/men3.png", "Images/men4.png", "Images/men5.png", "Images/men6.png", "Images/men7.png", "Images/men8.png", "Images/men9.png"],
-  female: ["Images/women1.png", "Images/women2.png", "Images/women3.png", "Images/women4.png", "Images/women5.png", "Images/women6.png", "Images/women7.png", "Images/women8.png", "Images/women9.png"],
-  kids: ["Images/kid1.png", "Images/kid2.png", "Images/kid3.png", "Images/kid4.png", "Images/kid5.png", "Images/kid6.png", "Images/kid7.png"]
+  men: ["Images/mens1.png", "Images/mens2.png", "Images/mens3.png", "Images/mens4.png", "Images/mens5.png", "Images/mens6.png", "Images/mens7.png", "Images/mens8.png", "Images/mens9.png"],
+  female: ["Images/womens1.png", "Images/womens2.png", "Images/womens3.png", "Images/womens4.png", "Images/womens5.png", "Images/womens6.png", "Images/womens7.png", "Images/womens8.png", "Images/womens9.png"],
+  kids: ["Images/kids1.png", "Images/kids2.png", "Images/kids3.png", "Images/kids4.png", "Images/kids5.png", "Images/kids6.png", "Images/kids7.png"]
 };
 
 let currentCategory = "men";
