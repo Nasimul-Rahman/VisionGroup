@@ -27,7 +27,7 @@
 .company_info_section h3 {
     color: #DD6F70;
     font-family: 'Bebas Neue';
-    font-size: 20px;
+    font-size: 28px;
 }
 
 .company_info_section p {
@@ -137,9 +137,77 @@
   background-repeat: no-repeat;
 }
 
+.company_cards {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.company_card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  border-bottom: 5px solid #E10600;
+  /* background-color: whitesmoke; */
+  padding: 10px;
+  margin: 30px;
+  border-radius: 9px;
+  transition: 0.5s ease;
+}
+
+.company_card h3 {
+  width: 300px;
+  color: #1A1A1A;
+  font-weight: lighter;
+  transition: 0.5s ease;
+}
+
+.company_card:hover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  border-bottom: 5px solid #E10600;
+  background-color: #E10600;
+  color: white;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 9px;
+}
+
+.company_card:hover h3 {
+  color: white;
+}
+
+
+.company_card.heading {
+  color:#E10600;
+  border-bottom: none;
+}
+
+.company_card.heading:hover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  background-color: transparent;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 9px;
+  color:#E10600;
+  border-bottom: none;
+}
+
+
+
+
 
 /* Optional: slightly taller images on larger screens */
 @media (min-width: 900px) {
+
   .image-grid img {
     height: 260px;
   }
@@ -149,6 +217,24 @@
 }
 
 @media (max-width: 768px) {
+
+    .company_cards {
+      width: 95%;
+      align-items: center;
+    }
+
+    .company_card {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      gap: 6px;
+      margin: 15px 0;
+    }
+
+    .company_card h3 {
+      width: 100%;
+      font-size: 14px;
+    }
     .company_info_section .images_container {
       display: flex;
       justify-content: space-around;
