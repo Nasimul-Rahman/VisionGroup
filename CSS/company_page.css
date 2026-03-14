@@ -5,6 +5,7 @@
     align-items: flex-start;
     flex-direction: column;
     margin:50px;
+    position: relative;
 }
 
 .company_info_section {
@@ -169,6 +170,78 @@
 .company_card.heading {
   color:#E10600;
   border-bottom: none;
+}
+
+.aboutus_stats_section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+}
+
+.counter {
+  font-size: 50px;
+}
+
+.stat_card {
+  width: 400px;
+  height: 200px;
+  margin: 15px;
+  background-color: #6b0000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat_card p {
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 28px;
+    text-align: center;
+}
+
+.decor-rect {
+    position: absolute;
+    background-color: #E10600;
+    opacity: 0.08;
+    z-index: 0; /* stays behind content */
+}
+
+/* Rectangle 1 */
+.rect-3 {
+    width: 900px;
+    height: 390px;
+    bottom: 45%;
+    right: 30%;
+    color:#E10600
+}
+
+/* Rectangle 2 */
+.rect-4 {
+    width: 320px;
+    height: 700px;
+    bottom: 60%;
+    right: 20%;
+    color:#E10600
+}
+
+.rect-5 {
+    width: 900px;
+    height: 390px;
+    bottom: 30%;
+    right: 10%;
+    color:#E10600
+}
+
+.image_decoration {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0; /* stays behind content */
+    bottom: 3%;
+    right: 3%;
+    width: 800px;
 }
 
 @media (hover: hover) {
