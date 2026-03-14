@@ -237,7 +237,7 @@
 
 .image_decoration {
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.17;
     z-index: 0; /* stays behind content */
     bottom: 3%;
     right: 3%;
