@@ -291,6 +291,14 @@
 
 @media (max-width: 768px) {
 
+    .rect-3, .rect-4, .rect-5 {
+      display: none;
+    }
+
+    .aboutus_stats_section {
+      flex-direction: column;
+    }
+
     .company_card.heading {
       display: none;
     }
