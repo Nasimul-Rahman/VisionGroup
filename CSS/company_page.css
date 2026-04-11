@@ -240,7 +240,7 @@
     opacity: 0.17;
     z-index: 0; /* stays behind content */
     bottom: 3%;
-    right: 3%;
+    left: 40%;
     width: 800px;
 }
 
